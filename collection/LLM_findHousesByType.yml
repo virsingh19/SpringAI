@@ -1,0 +1,24 @@
+info:
+  name: LLM_findHousesByType
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://localhost:8080/v1/chat/houses
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+        "user_prompt": "Find houses with the type of multi_family, i don't know their zip code. Use only tool response, don't suggest from your own side"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
