@@ -161,7 +161,6 @@ H2 console is available at `http://localhost:8080/h2-console` for debugging. Use
 
 ## Important Notes
 
-- The application name is "baseball" (in `application.yml`) even though it's a real estate app — this is a configuration artifact
 - Test files have not been added yet — consider adding integration tests for the chat service and tool invocation logic
 - The project metadata in `pom.xml` mentions "player-service-java" as the description; consider aligning with actual real estate naming
 - CSV data loading happens at startup via `schema.sql`; ensure `ny_real_estate.csv` is in the project root
