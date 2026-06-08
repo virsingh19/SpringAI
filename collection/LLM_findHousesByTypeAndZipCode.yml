@@ -1,0 +1,24 @@
+info:
+  name: LLM_findHousesByTypeAndZipCode
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:8080/v1/chat/houses
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "user_prompt": "Find houses of type single_family in the zipcode of 12182. Use only tool response, don't suggest from your own side"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
